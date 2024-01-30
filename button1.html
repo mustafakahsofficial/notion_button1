@@ -1,256 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
-  <style>
-    :root {
-      --my-color:#34495e;
-      --my-color-accent:#2c3e50;
-      --black: #3c3c3c;
-      --black-accent: #2d2d2d;
-      --blue: #809bce;
-      --blue-accent: #5c6f94;
-      --purple: #8a508f;
-      --purple-accent: #5d3661;
-      --mint: #b8e0d4;
-      --mint-accent: #8ba89f;
-      --pink: #eac4d5;
-      --pink-accent: #b495a3;
-      --green: #74a892;
-      --green-accent: #5e8675;
-      --red:#d74a49;
-      --red-accent:#b53f3f;
-      --orange:#d35400;
-      --orange-accent:#9e4102;
-      --yellow:#f1c40f;
-      --yellow-accent:#bd9a0c;
-    }
+	<!-- Google Font -->
 
-    button {
-      background: none;
-      color: inherit;
-      border: none;
-      padding: 0;
-      font: inherit;
-      cursor: pointer;
-      outline: inherit;
-    }
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
 
-    i {
-      padding-right: 2px;
-    }
+	<!-------->
 
-    .btn {
-      text-align: center;
-      color: #ffffff;
-      font-family: 'Manrope';
-      display: inline-block;
-      margin: 10px;
-    }
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
 
-    .my-color {
-      background-color: var(--my-color);
-    }
 
-    .my-color:hover {
-      background-color: var(--my-color-accent);
-    }
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
 
-    .my-color.threeD {
-      box-shadow: 0px 4px 0px var(--my-color-accent);
-    }
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
 
-    .my-color.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--my-color-accent);
-    }
-    .black {
-      background-color: var(--black);
-    }
+		.background {
+			background-color: #ece5f0;
+		}
 
-    .black:hover {
-      background-color: var(--black-accent);
-    }
+		.border {
+			border: 1px solid #cccccc;
 
-    .black.threeD {
-      box-shadow: 0px 4px 0px var(--black-accent);
-    }
+		}
 
-    .black.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--black-accent);
-    }
+		.navMenu a:hover {
 
-    .blue {
-      background-color: var(--blue);
-    }
-
-    .blue:hover {
-      background-color: var(--blue-accent);
-    }
-
-    .blue.threeD {
-      box-shadow: 0px 4px 0px var(--blue-accent);
-    }
-
-    .blue.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--blue-accent);
-    }
-
-    .purple {
-      background-color: var(--purple);
-    }
-
-    .purple:hover {
-      background-color: var(--purple-accent);
-    }
-
-    .purple.threeD {
-      box-shadow: 0px 4px 0px var(--purple-accent);
-    }
-
-    .purple.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--purple-accent);
-    }
-
-    .mint {
-      background-color: var(--mint);
-    }
-
-    .mint:hover {
-      background-color: var(--mint-accent);
-    }
-
-    .mint.threeD {
-      box-shadow: 0px 4px 0px var(--mint-accent);
-    }
-
-    .mint.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--mint-accent);
-    }
-
-    .pink {
-      background-color: var(--pink);
-    }
-
-    .pink:hover {
-      background-color: var(--pink-accent);
-    }
-
-    .pink.threeD {
-      box-shadow: 0px 4px 0px var(--pink-accent);
-    }
-
-    .pink.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--pink-accent);
-    }
-
-    .green {
-      background-color: var(--green);
-    }
-
-    .green:hover {
-      background-color: var(--green-accent);
-    }
-
-    .green.threeD {
-      box-shadow: 0px 4px 0px var(--green-accent);
-    }
-
-    .green.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--green-accent);
-    }
-
-    .red {
-      background-color: var(--red);
-    }
-
-    .red:hover {
-      background-color: var(--red-accent);
-    }
-
-    .red.threeD {
-      box-shadow: 0px 4px 0px var(--red-accent);
-    }
-
-    .red.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--red-accent);
-    }
-
-    .orange {
-      background-color: var(--orange);
-    }
-
-    .orange:hover {
-      background-color: var(--orange-accent);
-    }
-
-    .orange.threeD {
-      box-shadow: 0px 4px 0px var(--orange-accent);
-    }
-
-    .orange.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--orange-accent);
-    }
-
-    .yellow {
-      background-color: var(--yellow);
-    }
-
-    .yellow:hover {
-      background-color: var(--yellow-accent);
-    }
-
-    .yellow.threeD {
-      box-shadow: 0px 4px 0px var(--yellow-accent);
-    }
-
-    .yellow.threeD:active {
-      box-shadow: 0 0;
-      background-color: var(--yellow-accent);
-    }
-
-    .rounded {
-      border-radius: 20px;
-    }
-
-    .small {
-      padding: 5px 20px;
-      font-size: 10px;
-    }
-
-    .mid {
-      padding: 10px 40px;
-      font-size: 12px;
-    }
-
-    .large {
-      padding: 15px 60px;
-      font-size: 18px;
-    }
-  </style>
-
+			color: #d09c0b;
+		}
+	</style>
 </head>
 
 <body>
 
-  <button class="btn large my-color rounded threeD" type="button" onclick="navigate()"> <i class="fa-regular fa-star"></i> My Button</button>
-  
-  <script>
-    function navigate() {
-      window.open("https://example.com", '_blank').focus();
-    }
-  </script>
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Inbox</a>
+		<a id="week" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-week"></i> Planner</a>
+		<a id="projects" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-briefcase"></i> Projects</a>
+		<a id="tasks" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-list-check"></i> Tasks</a>
+		<a id="business" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-wave"></i> Business</a>
+		<a id="knowledge" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-lightbulb"></i> Knowledge</a>
+		<a id="topics" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-layer-group"></i> Topics</a>
+		<a id="notes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Notes</a>
+		<a id="media" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bookmark"></i> Media</a>
+		<a id="resourses" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-wrench"></i> Resourses</a>
+		<a id="lifewiki" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-heart"></i> Lifewiki</a>
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "inbox")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "week")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "month")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "projects")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "business")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "tasks")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "knowledge")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "topics")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "notes")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "media")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "resourses")
+				window.open("https://example.com3", '_blank').focus();
+			else if (id == "lifewiki")
+				window.open("https://example.com", '_blank').focus();
+
+		}
+	</script>
+
 
 </body>
 
